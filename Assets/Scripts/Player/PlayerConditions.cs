@@ -51,6 +51,8 @@ public class PlayerConditions : MonoBehaviour, IDamageable
     void Update()
     {
         if(health.curValue == 0.0f) Die();
+
+        health.uiBar.fillAmount = health.GetPercentage();
     }
 
     public void Heal(float amount)
